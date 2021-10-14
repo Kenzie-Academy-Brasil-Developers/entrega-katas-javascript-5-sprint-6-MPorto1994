@@ -42,12 +42,13 @@ function diftValues(array){
         }
     })
     // console.log(typeof array)
-    // console.log(typeof newArray)
+    console.log(typeof newArray)
     return newArray
 }
 
-//Conta Valores
+//Conta Valores Diferentes
 function countValues(array){
+    
     let newArray = []
     let newArray2 = []
     array.forEach(each=>{
@@ -59,18 +60,19 @@ function countValues(array){
             // console.log(typeof each)
         }
         else{
-            newArray2[newArray.indexOf[each]]++
+            newArray2[newArray.indexOf(each)]++
             // let elementArray =newArray2[newArray2.indexOf(newArray.indexOf(each))]
             // elementArray = elementArray.replace()
 
         }
 
     })
-    for (let i=0;i<=newArray.length;i++){
-        newArray[i]=`${newArray[i]}(${newArray2[i]})`
+    let result = []
+    for (let i=0;i<newArray.length;i++){
+        result.push(`${newArray[i]}(${newArray2[i]})`)
         console.log(newArray[i])
     }
     // console.log(typeof array)
     // console.log(typeof newArray)
-    return newArray
+    return result
 }
