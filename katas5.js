@@ -35,44 +35,29 @@ function restOfIt(dividend, divisor){
 function diftValues(array){
     let newArray = []
     array.forEach(each=>{
-        // console.log(typeof each)
         if(newArray.find(element => element===each)==undefined){
             newArray.push(each)
-            // console.log(typeof each)
         }
     })
-    // console.log(typeof array)
-    console.log(typeof newArray)
     return newArray
 }
 
 //Conta Valores Diferentes
 function countValues(array){
-    
     let newArray = []
     let newArray2 = []
     array.forEach(each=>{
-        // console.log(typeof each)
         if(newArray.find(element => element===each)==undefined){
             newArray.push(each)
-            // newArray2.push(`${each}(1)`)
             newArray2.push(1)
-            // console.log(typeof each)
         }
         else{
             newArray2[newArray.indexOf(each)]++
-            // let elementArray =newArray2[newArray2.indexOf(newArray.indexOf(each))]
-            // elementArray = elementArray.replace()
-
         }
-
     })
     let result = []
     for (let i=0;i<newArray.length;i++){
         result.push(`${newArray[i]}(${newArray2[i]})`)
-        console.log(newArray[i])
     }
-    // console.log(typeof array)
-    // console.log(typeof newArray)
     return result
 }

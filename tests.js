@@ -70,28 +70,28 @@ function  testCalculateRemainder2() {
 
  //Valores Diferentes 
 function  testDistinctValues1() {
-    let result = diftValues([1,1,2,1,3,54,5,67,2]);
-    let expected = [1,2,3,54,5,67];
+    let result = diftValues([1,1,2,1,3,54,5,67,2]).join();
+    let expected = [1,2,3,54,5,67].join();
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
 testDistinctValues1()
 function  testDistinctValues2() {
-    let result = diftValues([-10,10,5,9,101,88,101]);
-    let expected = [-10,10,5,9,101,88];
+    let result = diftValues([-10,10,5,9,101,88,101]).join();
+    let expected = [-10,10,5,9,101,88].join();
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
 testDistinctValues2()
 
 //Valores diferentes Contados
 function  testCountValues1() {
-    let result = countValues([1,1,2,1,3,54,5,67,2]);
-    let expected = ["1(3)","2(2)","3(1)","54(1)","5(1)","67(1)"];
+    let result = countValues([1,1,2,1,3,54,5,67,2]).join();
+    let expected = ["1(3)","2(2)","3(1)","54(1)","5(1)","67(1)"].join();
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
 testCountValues1()
 function  testCountValues2() {
-    let result = countValues([-10,10,5,9,101,101]);
-    let expected = ["-10(1)","10(1)","5(1)","9(1)","101(2)"];
+    let result = countValues([-10,10,5,9,101,101]).join();
+    let expected = ["-10(1)","10(1)","5(1)","9(1)","101(2)"].join();
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 }
-// testCountValues2()
+testCountValues2()
